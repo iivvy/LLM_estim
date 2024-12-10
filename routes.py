@@ -42,7 +42,7 @@ async def estimate(input: ProjectInput):
         # Extract values from the parsed JSON
         duration = extracted.get("duration", "Unknown")
         cost = extracted.get("cost", "Unknown")
-        return {"duration": duration, "cost": cost}
+        return {"duration(days)": duration, "cost($)": cost}
     except json.JSONDecodeError:
         return {"error": f"Unable to parse the response. Ensure the model returns valid JSON. Raw response: {raw_response}"}
     except Exception as e:
