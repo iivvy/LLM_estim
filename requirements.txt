@@ -1,7 +1,0 @@
-accelerate
-langchain
-streamlit
-langchain-community 
-langchain-core
-torch
-bitsandbytes
