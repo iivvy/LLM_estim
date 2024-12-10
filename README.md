@@ -14,13 +14,7 @@ This project provides a REST API to estimate the cost and duration of software p
 - Python 3.8+
 - macOS with Apple Silicon (for running the MLX library on an M1/M2 chip)
 
-### Python Libraries
 
-Install the required libraries using `pip`:
-
-```bash
-pip install fastapi uvicorn pydantic requests mlx
-```
 
 ## Installation
 
@@ -34,7 +28,8 @@ pip install fastapi uvicorn pydantic requests mlx
    ```bash
    python3 -m venv venv
    source venv/bin/activate
-   pip install -r requirements.txt
+   pip install fastapi uvicorn pydantic requests mlx
+
    ```
 
 3. Start the FastAPI server:
