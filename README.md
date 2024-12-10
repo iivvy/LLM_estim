@@ -90,9 +90,9 @@ The API consists of the following components:
 
 ```
 project-estimator/
-├── main.py           # Entry point for the FastAPI app
+├── main.py           # Init
 ├── model.py          # Pydantic models for API input
-├── requirements.txt  # Dependencies
+├── routes            # API endpoint
 └── README.md         # Project documentation
 ```
 
