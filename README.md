@@ -63,8 +63,8 @@ This project provides a REST API to estimate the cost and duration of software p
 
 ```json
 {
-  "duration": 2,
-  "cost": 15000000
+  "duration(years)": 2,
+  "cost($)": 15000000
 }
 ```
 
