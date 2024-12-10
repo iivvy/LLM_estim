@@ -17,7 +17,7 @@ router = APIRouter()
 async def estimate(input: ProjectInput):
     chatbot_role = (
         "You estimate the cost and duration of a project based on its description and user stories. "
-        "Always respond concisely in JSON format with two keys: 'duration' (years) and 'cost' (dollars). "
+        "Always respond concisely in JSON format with two keys: 'duration' (days) and 'cost' (dollars). "
         "Do not include explanations or additional details."
     )
     question = f"Estimate the duration and cost for: {input.project_description}. User stories: {', '.join(input.user_stories)}."
