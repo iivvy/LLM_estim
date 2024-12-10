@@ -108,7 +108,7 @@ curl -X POST "http://127.0.0.1:8000/estimate/" \
 -d '{"project_description": "Develop a Spotify-like platform", "user_stories": ["Stream music", "Create playlists", "Follow artists"]}'
 ```
 
-## Limitations
+<!-- ## Limitations
 
 - The cost and duration estimates are approximate and based on predefined assumptions by the AI model.
 - Requires macOS with Apple Silicon to leverage the MLX library effectively.
@@ -119,12 +119,4 @@ curl -X POST "http://127.0.0.1:8000/estimate/" \
 - Improve model prompt engineering for more accurate results.
 - Add support for multiple LLMs and configurable backends.
 - Implement frontend integration and deployment.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
----
-
-Feel free to contribute to the project by submitting issues or pull requests!
-
+ -->
