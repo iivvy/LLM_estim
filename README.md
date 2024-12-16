@@ -20,8 +20,8 @@ This project provides a REST API to estimate the cost and duration of software p
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/project-estimator.git
-   cd project-estimator
+   git clonehttps://github.com/iivvy/LLM_estim.git
+   cd LLM_estim
    ```
 
 2. Set up your Python environment:
