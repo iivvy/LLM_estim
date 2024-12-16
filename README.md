@@ -1,6 +1,6 @@
 # Project Estimator API
 
-This project provides a REST API to estimate the cost and duration of software projects based on a project description and a set of user stories. The backend is implemented using FastAPI and leverages the Llama 3 model (via the MLX library) to generate AI-powered estimates.
+This project provides a REST API to estimate the cost and duration of software projects based on a project description and a set of user stories. The backend is implemented using FastAPI and leverages the Llama 3 model (via the HuggingFace API) to generate AI-powered estimates.
 
 ## Features
 
@@ -12,7 +12,7 @@ This project provides a REST API to estimate the cost and duration of software p
 ## Requirements
 
 - Python 3.8+
-- macOS with Apple Silicon (for running the MLX library on an M1/M2 chip)
+
 
 
 
@@ -28,7 +28,7 @@ This project provides a REST API to estimate the cost and duration of software p
    ```bash
    python3 -m venv venv
    source venv/bin/activate
-   pip install fastapi uvicorn pydantic requests mlx
+   pip install fastapi uvicorn pydantic requests 
 
    ```
 
@@ -41,6 +41,13 @@ This project provides a REST API to estimate the cost and duration of software p
    Visit [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) for the interactive Swagger UI.
 
 ## API Usage
+### Configuration 
+Create a config.json file in the project root directory to store your Hugging Face API token.
+```json
+{
+    "huggingface_token": "your-huggingface-token"
+}
+```
 
 ### Endpoint
 
@@ -62,10 +69,12 @@ This project provides a REST API to estimate the cost and duration of software p
 #### Response Example
 
 ```json
-{
-  "duration(years)": 2,
-  "cost($)": 15000000
-}
+ {
+    "duration": 2.5,
+    "cost": 15000000,
+    "explanation": "Building a platform like Spotify requires a complex architecture, including a scalable backend, a robust music database, and a user-friendly frontend. The estimated duration is 2.5 years, considering the complexity of the project and the need for a team of experienced developers, designers, and project managers. The estimated cost is $15 million, taking into account the need for a large team, infrastructure, and testing. The project will require a significant amount of time and resources to develop a high-quality platform that can handle a large user base and a vast music library."
+  }
+
 ```
 
 ### Error Handling
